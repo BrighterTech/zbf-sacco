@@ -23,20 +23,123 @@
                   </v-col>
                   <v-col cols="12" md="6" class="py-0">
                     <v-text-field
-                      label="Email"
+                      label="Surname"
+                      outlined
+                      type="text"
+                      v-model="email"
+                      placeholder="Surname"
+                    ></v-text-field>
+                  </v-col>
+                   <v-col cols="12" md="6" class="py-0">
+                    <v-text-field
+                      label="DOB"
+                      outlined
+                      type="text"
+                      v-model="email"
+                      placeholder="Surname"
+                    ></v-text-field>
+                  </v-col>
+                   <v-col cols="12" md="6" class="py-0">
+                    <v-text-field
+                      label="ID Number"
+                      outlined
+                      type="text"
+                      v-model="email"
+                      placeholder="Surname"
+                    ></v-text-field>
+                  </v-col>
+                   <v-col cols="12" md="6" class="py-0">
+                    <v-text-field
+                      label="Phone Number"
+                      outlined
+                      type="text"
+                      v-model="email"
+                      placeholder="Surname"
+                    ></v-text-field>
+                  </v-col>
+                   <v-col cols="12" md="6" class="py-0">
+                    <v-text-field
+                      label="Email Address"
                       outlined
                       type="email"
                       v-model="email"
-                      placeholder="Email"
+                      placeholder="Email Address"
                     ></v-text-field>
                   </v-col>
-                  <v-col cols="12" class="py-0">
-                    <v-textarea
-                      name="message"
+                   <v-col cols="12" md="6" class="py-0">
+                    <v-text-field
+                      label="Physical Address"
                       outlined
-                      label="Message"
-                      rows="3"
-                    ></v-textarea>
+                      type="text"
+                      v-model="email"
+                      placeholder="Surname"
+                    ></v-text-field>
+                  </v-col>
+                   <v-col cols="12" md="6" class="py-0">
+                    <v-text-field
+                      label="Gender"
+                      outlined
+                      type="text"
+                      v-model="email"
+                      placeholder="Surname"
+                    ></v-text-field>
+                  </v-col>
+                   <v-col cols="12" md="6" class="py-0">
+                    <v-text-field
+                      label="Academic Qualification"
+                      outlined
+                      type="text"
+                      v-model="email"
+                      placeholder="Surname"
+                    ></v-text-field>
+                  </v-col>
+                   <v-col cols="12" md="6" class="py-0">
+                    <v-text-field
+                      label="Field"
+                      outlined
+                      type="text"
+                      v-model="email"
+                      placeholder="Surname"
+                    ></v-text-field>
+                  </v-col>
+                   <v-col cols="12" md="12" class="py-0">
+                     <center>Next of Kin Details</center>
+                  </v-col>
+                    <v-col cols="12" md="6" class="py-0">
+                    <v-text-field
+                      label="Name"
+                      outlined
+                      type="text"
+                      v-model="email"
+                      placeholder="Surname"
+                    ></v-text-field>
+                  </v-col>
+                    <v-col cols="12" md="6" class="py-0">
+                    <v-text-field
+                      label="Surname"
+                      outlined
+                      type="text"
+                      v-model="email"
+                      placeholder="Surname"
+                    ></v-text-field>
+                  </v-col>
+                    <v-col cols="12" md="6" class="py-0">
+                    <v-text-field
+                      label="Contact"
+                      outlined
+                      type="text"
+                      v-model="email"
+                      placeholder="Surname"
+                    ></v-text-field>
+                  </v-col>
+                    <v-col cols="12" md="6" class="py-0">
+                    <v-text-field
+                      label="Relation"
+                      outlined
+                      type="text"
+                      v-model="email"
+                      placeholder="Surname"
+                    ></v-text-field>
                   </v-col>
                 </v-row>
                 <v-btn
