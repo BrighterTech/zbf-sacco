@@ -1,18 +1,14 @@
 <template>
   <div>
 <pagetop />
-<Registrationtext />
-<Registrationcard />
-
+<investmentstext />
+<investmentstable />
   </div>
 </template>
 <script>
-import contactcard from '../components/contactcard.vue';
-import Contacttext from '../components/contacttext.vue';
-import Registrationcard from '../components/registrationcard.vue';
+
 
 export default {
-  components: { contactcard, Contacttext, Registrationcard },
   head() {
     return {
       title: "ZBF SACCO | Save Money, Invest & Improve",
@@ -69,7 +65,7 @@ a.btn-custom-md.rangu.v-btn.v-btn--block.v-btn--outlined.v-btn--router.theme--li
     background: linear-gradient(90deg, #39621c 0, #0b6905) !important;
 }
 .mini-spacer.rangu.bg-extra-light {
-    background-color:#006b00;
+    background-color: #3a621c;
     color: rgb(255, 255, 255);
 }
 h2.ui-title.rangu.font-weight-bold {

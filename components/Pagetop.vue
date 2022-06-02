@@ -35,19 +35,19 @@
               <n-link class="nav-link" nuxt to="/"> Home </n-link>
             </li>
             <li class="nav-item" text>
-              <n-link class="nav-link" nuxt to="/about" v-scroll-to="'#about'"> About Us </n-link>
+              <n-link class="nav-link" nuxt to="/about"> About Us </n-link>
             </li>
             <li class="nav-item" text>
-              <n-link class="nav-link" nuxt to="/work"> Investments </n-link>
+              <n-link class="nav-link" nuxt to="/investments"> Investments </n-link>
             </li>
             <li class="nav-item" text>
-              <n-link class="nav-link" nuxt to="/services"> Projects </n-link>
+              <n-link class="nav-link" nuxt to="/ourprojects"> Projects </n-link>
             </li>
             <li class="nav-item" text>
-              <n-link class="nav-link" nuxt to="/freebies"> Our Team </n-link>
+              <n-link class="nav-link" nuxt to="/team"> Our Team </n-link>
             </li>
             <li class="nav-item" text>
-              <n-link class="nav-link" nuxt to="/freebies"> Blogs</n-link>
+              <n-link class="nav-link" nuxt to="/blogs"> Blogs</n-link>
             </li>
           </ul>
         </div>
