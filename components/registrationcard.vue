@@ -155,6 +155,52 @@
                       outlined
                     ></v-select>
                   </v-col>
+                  <v-col cols="12" md="12" class="py-0">
+                     <center>Business Details(If you own a business complete the below)</center>
+                  </v-col>
+                    <v-col cols="12" md="6" class="py-0">
+                    <v-text-field
+                      label="Name of Business"
+                      outlined
+                      type="text"
+                      v-model="email"
+                      placeholder="Name of Business"
+                    ></v-text-field>
+                  </v-col>
+                    <v-col cols="12" md="6" class="py-0">
+                   <v-select
+                     :items="sector"
+                      label="Sector"
+                      outlined
+                    ></v-select>
+                  </v-col>
+                    <v-col cols="12" md="6" class="py-0">
+                    <v-text-field
+                      label="Business Address"
+                      outlined
+                      type="text"
+                      v-model="email"
+                      placeholder="Address"
+                    ></v-text-field>
+                  </v-col>
+                    <v-col cols="12" md="6" class="py-0">
+                       <v-text-field
+                      label="Business Phone Number"
+                      outlined
+                      type="text"
+                      v-model="email"
+                      placeholder="Phone Number"
+                    ></v-text-field>
+                  </v-col>
+                   <v-col cols="12" md="12" class="py-0">
+                       <v-text-field
+                      label="Website Link"
+                      outlined
+                      type="text"
+                      v-model="email"
+                      placeholder="Enter URL"
+                    ></v-text-field>
+                  </v-col>
                 </v-row>
                 <v-btn
                   nuxt
@@ -198,6 +244,7 @@ export default {
       items: ['Male', 'Female'],
       qualifications: ['Certificate', 'Degree','Masters','PhD'],
       relation: ['Father', 'Mother','Brother','Sister','Other'],
+       sector: ['Retail', 'Construction','Farming','Tourism','Automotive','Logistics','Other'],
     };
   },
   methods: {},
