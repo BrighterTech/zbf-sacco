@@ -34,6 +34,7 @@
                     <v-menu
       ref="menu"
       v-model="menu"
+      outlined
       :close-on-content-click="false"
       transition="scale-transition"
       offset-y
@@ -43,14 +44,15 @@
         <v-text-field
           v-model="date"
           label="Birthday date"
-          prepend-icon="mdi-calendar"
           readonly
+          outlined
           v-bind="attrs"
           v-on="on"
         ></v-text-field>
       </template>
       <v-date-picker
         v-model="date"
+        outlined
         :active-picker.sync="activePicker"
         :max="(new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10)"
         min="1950-01-01"
@@ -73,7 +75,7 @@
                       outlined
                       type="text"
                       v-model="email"
-                      placeholder="Surname"
+                      placeholder="Phone Number"
                     ></v-text-field>
                   </v-col>
                    <v-col cols="12" md="6" class="py-0">
@@ -91,34 +93,29 @@
                       outlined
                       type="text"
                       v-model="email"
-                      placeholder="Surname"
+                      placeholder="Physical Address"
                     ></v-text-field>
                   </v-col>
                    <v-col cols="12" md="6" class="py-0">
-                    <v-text-field
+                    <v-select
+                     :items="items"
                       label="Gender"
                       outlined
-                      type="text"
-                      v-model="email"
-                      placeholder="Surname"
-                    ></v-text-field>
+                    ></v-select>
                   </v-col>
                    <v-col cols="12" md="6" class="py-0">
-                    <v-text-field
-                      label="Academic Qualification"
+                     <v-select
+                     :items="qualifications"
+                      label="Academic Qulifications"
                       outlined
-                      type="text"
-                      v-model="email"
-                      placeholder="Surname"
-                    ></v-text-field>
+                    ></v-select>
                   </v-col>
                    <v-col cols="12" md="6" class="py-0">
                     <v-text-field
                       label="Field"
                       outlined
                       type="text"
-                      v-model="email"
-                      placeholder="Surname"
+                      placeholder="E.g Accounting"
                     ></v-text-field>
                   </v-col>
                    <v-col cols="12" md="12" class="py-0">
@@ -130,7 +127,7 @@
                       outlined
                       type="text"
                       v-model="email"
-                      placeholder="Surname"
+                      placeholder="Name"
                     ></v-text-field>
                   </v-col>
                     <v-col cols="12" md="6" class="py-0">
@@ -148,17 +145,15 @@
                       outlined
                       type="text"
                       v-model="email"
-                      placeholder="Surname"
+                      placeholder="Contact"
                     ></v-text-field>
                   </v-col>
                     <v-col cols="12" md="6" class="py-0">
-                    <v-text-field
+                     <v-select
+                     :items="relation"
                       label="Relation"
                       outlined
-                      type="text"
-                      v-model="email"
-                      placeholder="Surname"
-                    ></v-text-field>
+                    ></v-select>
                   </v-col>
                 </v-row>
                 <v-btn
@@ -200,6 +195,9 @@ export default {
     return {
       name: "",
       email: "",
+      items: ['Male', 'Female'],
+      qualifications: ['Certificate', 'Degree','Masters','PhD'],
+      relation: ['Father', 'Mother','Brother','Sister','Other'],
     };
   },
   methods: {},
