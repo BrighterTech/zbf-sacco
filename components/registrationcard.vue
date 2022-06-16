@@ -263,6 +263,8 @@ export default {
         axios.post('/api/register_',payload).then(response =>{
            if(response.data.status){
 
+            ////
+
            }
         }).catch(error=>{
           alert(error);
