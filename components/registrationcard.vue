@@ -204,11 +204,14 @@
                 </v-row>
                 <v-btn
                   nuxt
-                  to="/"
+                 
                   class="btn-custom-md btn-danger-gradient mt-12"
                   outlined
                   color="white"
                   elevation="0"
+                  @click="registerUser($event)"
+
+                  
                 >
                   Submit
                 </v-btn>
@@ -235,6 +238,7 @@
   </div>
 </template>
 <script>
+import axios from "axios"
 export default {
   name: "Contact",
   data() {
@@ -247,6 +251,23 @@ export default {
        sector: ['Retail', 'Construction','Farming','Tourism','Automotive','Logistics','Other'],
     };
   },
-  methods: {},
+  methods: {
+    registerUser:function(event)
+    {
+      event.preventDefault();
+      let  payload = {
+        name:this.name,
+        user_name:this.email
+
+      }
+        axios.post('/api/register_',payload).then(response =>{
+           if(response.data.status){
+
+           }
+        }).catch(error=>{
+          alert(error);
+        })
+    }
+  },
 };
 </script>

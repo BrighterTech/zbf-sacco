@@ -60,7 +60,7 @@
               <v-card-text>
               <div>
                 <h5 class="team-title  font-weight-medium font-18">
-                 Brave Svomai
+                 Person Name
                 </h5>
                 <p class="team-subtitle">Property Specialist</p>
               </div>
@@ -106,7 +106,7 @@
            <v-card-text>
               <div>
                 <h5 class="team-title  font-weight-medium font-18">
-                 Brave Svomai
+                 Person Name
                 </h5>
                 <p class="team-subtitle">Property Specialist</p>
               </div>
@@ -152,7 +152,7 @@
            <v-card-text>
               <div>
                 <h5 class="team-title  font-weight-medium font-18">
-                 Brave Svomai
+                 Person Name
                 </h5>
                 <p class="team-subtitle">Property Specialist</p>
               </div>
