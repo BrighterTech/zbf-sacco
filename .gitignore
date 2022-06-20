@@ -93,3 +93,9 @@ sw.*
 admin
 admin/
 /admin
+
+#Server files
+.htaccess
+app.js
+node_modules
+tmp/
