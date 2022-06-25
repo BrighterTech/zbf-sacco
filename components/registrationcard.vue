@@ -15,50 +15,50 @@
                 <v-row class="mt-15">
                   <v-col cols="12" md="6" class="py-0">
                     <v-text-field
-                      label="Name"
+                      label="First Name"
                       outlined
-                      v-model="name"
+                      v-model="fname"
                       placeholder="Name"
                     ></v-text-field>
                   </v-col>
                   <v-col cols="12" md="6" class="py-0">
                     <v-text-field
-                      label="Surname"
+                      label="Last Name"
                       outlined
                       type="text"
-                      v-model="email"
+                      v-model="lname"
                       placeholder="Surname"
                     ></v-text-field>
                   </v-col>
                    <v-col cols="12" md="6" class="py-0">
                     <v-menu
-      ref="menu"
-      v-model="menu"
-      outlined
-      :close-on-content-click="false"
-      transition="scale-transition"
-      offset-y
-      min-width="auto"
-    >
-      <template v-slot:activator="{ on, attrs }">
-        <v-text-field
-          v-model="date"
-          label="Birthday date"
-          readonly
-          outlined
-          v-bind="attrs"
-          v-on="on"
-        ></v-text-field>
-      </template>
-      <v-date-picker
-        v-model="date"
-        outlined
-        :active-picker.sync="activePicker"
-        :max="(new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10)"
-        min="1950-01-01"
-        @change="save"
-      ></v-date-picker>
-    </v-menu>
+                      ref="menu"
+                      v-model="dob"
+                      outlined
+                      :close-on-content-click="false"
+                      transition="scale-transition"
+                      offset-y
+                      min-width="auto"
+                    >
+                      <template v-slot:activator="{ on, attrs }">
+                        <v-text-field
+                          v-model="date"
+                          label="Birthday date"
+                          readonly
+                          outlined
+                          v-bind="attrs"
+                          v-on="on"
+                        ></v-text-field>
+                      </template>
+                      <v-date-picker
+                        v-model="date"
+                        outlined
+                        :active-picker.sync="activePicker"
+                        :max="(new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10)"
+                        min="1950-01-01"
+                        @change="save"
+                      ></v-date-picker>
+                    </v-menu>
                   </v-col>
                    <v-col cols="12" md="6" class="py-0">
                     <v-text-field
@@ -98,19 +98,19 @@
                   </v-col>
                    <v-col cols="12" md="6" class="py-0">
                     <v-select
-                     :items="items"
+                     :items="gender"
                       label="Gender"
                       outlined
                     ></v-select>
                   </v-col>
-                   <v-col cols="12" md="6" class="py-0">
+                  <v-col cols="12" md="6" class="py-0">
                      <v-select
                      :items="qualifications"
                       label="Academic Qulifications"
                       outlined
                     ></v-select>
                   </v-col>
-                   <v-col cols="12" md="6" class="py-0">
+                  <v-col cols="12" md="6" class="py-0">
                     <v-text-field
                       label="Field"
                       outlined
@@ -118,10 +118,31 @@
                       placeholder="E.g Accounting"
                     ></v-text-field>
                   </v-col>
+
+                   <v-col cols="12" md="12" class="py-0">
+                     <center>For Logging In</center>
+                  </v-col>
+                  <v-col cols="12" md="6" class="py-0">
+                    <v-text-field
+                      label="Password"
+                      outlined
+                      type="Password"
+                      v-model="password"
+                    ></v-text-field>
+                  </v-col>
+                  <v-col cols="12" md="6" class="py-0">
+                    <v-text-field
+                      label="Verify Password"
+                      outlined
+                      type="Password"
+                      v-model="password"
+                    ></v-text-field>
+                  </v-col>
+
                    <v-col cols="12" md="12" class="py-0">
                      <center>Next of Kin Details</center>
                   </v-col>
-                    <v-col cols="12" md="6" class="py-0">
+                  <v-col cols="12" md="6" class="py-0">
                     <v-text-field
                       label="Name"
                       outlined
@@ -130,7 +151,7 @@
                       placeholder="Name"
                     ></v-text-field>
                   </v-col>
-                    <v-col cols="12" md="6" class="py-0">
+                  <v-col cols="12" md="6" class="py-0">
                     <v-text-field
                       label="Surname"
                       outlined
@@ -139,7 +160,7 @@
                       placeholder="Surname"
                     ></v-text-field>
                   </v-col>
-                    <v-col cols="12" md="6" class="py-0">
+                  <v-col cols="12" md="6" class="py-0">
                     <v-text-field
                       label="Contact"
                       outlined
@@ -148,17 +169,18 @@
                       placeholder="Contact"
                     ></v-text-field>
                   </v-col>
-                    <v-col cols="12" md="6" class="py-0">
+                  <v-col cols="12" md="6" class="py-0">
                      <v-select
                      :items="relation"
                       label="Relation"
                       outlined
                     ></v-select>
                   </v-col>
+
                   <v-col cols="12" md="12" class="py-0">
                      <center>Business Details(If you own a business complete the below)</center>
                   </v-col>
-                    <v-col cols="12" md="6" class="py-0">
+                  <v-col cols="12" md="6" class="py-0">
                     <v-text-field
                       label="Name of Business"
                       outlined
@@ -167,8 +189,8 @@
                       placeholder="Name of Business"
                     ></v-text-field>
                   </v-col>
-                    <v-col cols="12" md="6" class="py-0">
-                   <v-select
+                  <v-col cols="12" md="6" class="py-0">
+                    <v-select
                      :items="sector"
                       label="Sector"
                       outlined
@@ -183,7 +205,7 @@
                       placeholder="Address"
                     ></v-text-field>
                   </v-col>
-                    <v-col cols="12" md="6" class="py-0">
+                  <v-col cols="12" md="6" class="py-0">
                        <v-text-field
                       label="Business Phone Number"
                       outlined
@@ -245,10 +267,10 @@ export default {
     return {
       name: "",
       email: "",
-      items: ['Male', 'Female'],
+      gender: ['Male', 'Female'],
       qualifications: ['Certificate', 'Degree','Masters','PhD'],
       relation: ['Father', 'Mother','Brother','Sister','Other'],
-       sector: ['Retail', 'Construction','Farming','Tourism','Automotive','Logistics','Other'],
+      sector: ['Retail', 'Construction','Farming','Tourism','Automotive','Logistics','Other'],
     };
   },
   methods: {
@@ -256,14 +278,30 @@ export default {
     {
       event.preventDefault();
       let  payload = {
-        name:this.name,
-        user_name:this.email
-
+        fname:this.fname,
+        lname:this.lname,
+        email:this.email,
+        dob:this.dob,
+        phone:this.phone,
+        address:this.address,
+        IDNumber:this.id_number,
+        gender:this.gender,
+        education:this.education,
+        field:this.field,
+        next_of_kin_firstname:this.nok_firstname,
+        next_of_kin_lastname:this.nok_lastname,
+        next_of_kin_contact:this.nok_contact,
+        next_of_kin_relation:this.nok_relation,
+        business_name:this.business_name,
+        sector:this.sector,
+        business_address:this.business_address,
+        business_phone:this.business_phone,
+        web_link:this.web_link
       }
-        axios.post('/api/register_',payload).then(response =>{
+        axios.post('https://admin.zbfsacco.co.zw/register',payload).then(response =>{
            if(response.data.status){
 
-            ////
+            console.log(response);
 
            }
         }).catch(error=>{
