@@ -65,7 +65,7 @@
                       label="ID Number"
                       outlined
                       type="text"
-                      v-model="email"
+                      v-model="id_number"
                       placeholder="ID Number"
                     ></v-text-field>
                   </v-col>
@@ -74,7 +74,7 @@
                       label="Phone Number"
                       outlined
                       type="text"
-                      v-model="email"
+                      v-model="phone"
                       placeholder="Phone Number"
                     ></v-text-field>
                   </v-col>
@@ -92,7 +92,7 @@
                       label="Physical Address"
                       outlined
                       type="text"
-                      v-model="email"
+                      v-model="address"
                       placeholder="Physical Address"
                     ></v-text-field>
                   </v-col>
@@ -101,6 +101,7 @@
                      :items="gender"
                       label="Gender"
                       outlined
+                      v-model="gender"
                     ></v-select>
                   </v-col>
                   <v-col cols="12" md="6" class="py-0">
@@ -108,6 +109,7 @@
                      :items="qualifications"
                       label="Academic Qulifications"
                       outlined
+                      v-model="education"
                     ></v-select>
                   </v-col>
                   <v-col cols="12" md="6" class="py-0">
@@ -115,6 +117,7 @@
                       label="Field"
                       outlined
                       type="text"
+                      v-model="field"
                       placeholder="E.g Accounting"
                     ></v-text-field>
                   </v-col>
@@ -135,7 +138,6 @@
                       label="Verify Password"
                       outlined
                       type="Password"
-                      v-model="password"
                     ></v-text-field>
                   </v-col>
 
@@ -144,19 +146,19 @@
                   </v-col>
                   <v-col cols="12" md="6" class="py-0">
                     <v-text-field
-                      label="Name"
+                      label="First Name"
                       outlined
                       type="text"
-                      v-model="email"
-                      placeholder="Name"
+                      v-model="nok_firstname"
+                      placeholder="First Name"
                     ></v-text-field>
                   </v-col>
                   <v-col cols="12" md="6" class="py-0">
                     <v-text-field
-                      label="Surname"
+                      label="Last Name"
                       outlined
                       type="text"
-                      v-model="email"
+                      v-model="nok_lastname"
                       placeholder="Surname"
                     ></v-text-field>
                   </v-col>
@@ -165,7 +167,7 @@
                       label="Contact"
                       outlined
                       type="text"
-                      v-model="email"
+                      v-model="nok_contact"
                       placeholder="Contact"
                     ></v-text-field>
                   </v-col>
@@ -174,6 +176,7 @@
                      :items="relation"
                       label="Relation"
                       outlined
+                      v-model="nok_relation"
                     ></v-select>
                   </v-col>
 
@@ -185,7 +188,7 @@
                       label="Name of Business"
                       outlined
                       type="text"
-                      v-model="email"
+                      v-model="business_name"
                       placeholder="Name of Business"
                     ></v-text-field>
                   </v-col>
@@ -194,6 +197,7 @@
                      :items="sector"
                       label="Sector"
                       outlined
+                      v-model="sector"
                     ></v-select>
                   </v-col>
                     <v-col cols="12" md="6" class="py-0">
@@ -201,7 +205,7 @@
                       label="Business Address"
                       outlined
                       type="text"
-                      v-model="email"
+                      v-model="business_address"
                       placeholder="Address"
                     ></v-text-field>
                   </v-col>
@@ -210,7 +214,7 @@
                       label="Business Phone Number"
                       outlined
                       type="text"
-                      v-model="email"
+                      v-model="business_phone"
                       placeholder="Phone Number"
                     ></v-text-field>
                   </v-col>
@@ -219,7 +223,7 @@
                       label="Website Link"
                       outlined
                       type="text"
-                      v-model="email"
+                      v-model="web_link"
                       placeholder="Enter URL"
                     ></v-text-field>
                   </v-col>
@@ -232,7 +236,6 @@
                   color="white"
                   elevation="0"
                   @click="registerUser($event)"
-
                   
                 >
                   Submit
