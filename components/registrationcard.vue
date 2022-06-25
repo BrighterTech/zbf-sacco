@@ -268,8 +268,6 @@ export default {
   name: "Contact",
   data() {
     return {
-      name: "",
-      email: "",
       gender: ['Male', 'Female'],
       qualifications: ['Certificate', 'Degree','Masters','PhD'],
       relation: ['Father', 'Mother','Brother','Sister','Other'],
@@ -302,13 +300,13 @@ export default {
         web_link:this.web_link
       }
         axios.post('https://admin.zbfsacco.co.zw/register',payload).then(response =>{
-           if(response.data.status){
+           if(response.data.status === 200){
 
             console.log(response);
 
            }
         }).catch(error=>{
-          alert(error);
+          alert(JSON.stringify(Object.values(error.response.data.messages)));
         })
     }
   },
